@@ -1,0 +1,14 @@
+# gateways/internal/gateway-internal.yaml
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  labels:
+    app: internal-gateway
+  name: internal-gateway
+spec:
+  gatewayClassName: kuadrant-gateway
+  listeners:
+    - name: internal-http
+      port: 80
+      protocol: HTTP
+      hostname: "internal.example.notls.local"

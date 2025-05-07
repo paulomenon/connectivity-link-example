@@ -1,0 +1,16 @@
+# apis/payments/auth-policy.yaml
+apiVersion: kuadrant.io/v1alpha1
+kind: AuthPolicy
+metadata:
+  name: payments-auth
+spec:
+  targetRef:
+    kind: HTTPRoute
+    name: payments-route
+  rules:
+    - credentials:
+        - name: user-jwt
+          in: header
+          valueFrom:
+            header: Authorization
+      requiredScopes: ["payments:read", "payments:write"]

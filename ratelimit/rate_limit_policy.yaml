@@ -1,0 +1,12 @@
+# apis/orders/rate-limit.yaml
+apiVersion: kuadrant.io/v1alpha1
+kind: RateLimitPolicy
+metadata:
+  name: orders-rate-limit
+spec:
+  targetRef:
+    kind: HTTPRoute
+    name: orders-route
+  limits:
+    - requestsPerUnit: 50
+      unit: minute

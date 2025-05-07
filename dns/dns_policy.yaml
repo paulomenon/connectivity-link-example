@@ -1,0 +1,9 @@
+# gateways/external/dns-policy.yaml
+apiVersion: kuadrant.io/v1alpha1
+kind: DNSPolicy
+metadata:
+  name: public-dns
+spec:
+  domains:
+    - "api.example.com"
+  provider: route53
