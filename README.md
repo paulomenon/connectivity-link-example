@@ -1,3 +1,5 @@
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
 # Connectivity Link Example Reference
 
 This repository offers configuration examples for deploying and managing **Red Hat Connectivity Link (RHCL)** within OpenShift. It illustrates the setup and organization of Gateway API resources—including Gateways, HTTPRoutes, RateLimitPolicies, AuthPolicies, and DNSPolicies—for both internal and external API gateways. The provided generic examples aim to facilitate understanding of the configuration.
@@ -58,9 +60,6 @@ Each folder contains one or more Kubernetes YAML manifests defining Gateway API 
 - Adapt configuration values (like hostnames, IP pools, and namespaces) to your environment.  
 - This repository does not include deployment automation or CI/CD integrations.  
 
-## License
-
-[MIT](LICENSE)
 
 ---
 
